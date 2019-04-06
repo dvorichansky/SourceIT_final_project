@@ -1,16 +1,161 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Budget tracker</title>
+    <meta charset="UTF-8" />
 
-<head>
-	<title>Budget tracker</title>
-	<meta charset="UTF-8" />
-</head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:900|Roboto:400,500,700"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-	<div id="app"></div>
+  <body>
+    <header>
+      <h1>Budget tracker</h1>
+      <div class="budget">
+        <div>
+          <form>
+            <input
+              type="text"
+              required="required"
+              placeholder="Add description"
+            />
+            <input type="number" required="required" placeholder="Value" />
+            <button>To calculate</button>
+          </form>
+        </div>
+        <div>
+          <h2>Available Budget in January 2019:</h2>
+          <div class="budget-current">+ $119</div>
+        </div>
+        <div>
+          <div class="box-table recent-reports">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Amount</th>
+                  <th>Percent</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INCOME</td>
+                  <td>+ 178.00</td>
+                  <td>
+                    <span>+40%</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>EXPENSES</td>
+                  <td>- 78.00</td>
+                  <td>
+                    <span>-40%</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </header>
 
-	<script src="src/index.js">
-	</script>
-</body>
+    <section>
+      <div class="box-table report report-plus">
+        <h2>Income</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Percent</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>dsds</td>
+              <td>2332.00</td>
+              <td>
+                <span>+40%</span>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>dsds</td>
+              <td>2332.00</td>
+              <td>
+                <span>+40%</span>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>dsds</td>
+              <td>2332.00</td>
+              <td>
+                <span>+40%</span>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <div class="box-table report report-minus">
+        <h2>Expenses</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Percent</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>dsds</td>
+              <td>2332.00</td>
+              <td>
+                <span>-40%</span>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>dsds</td>
+              <td>2332.00</td>
+              <td>
+                <span>-40%</span>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td>dsds</td>
+              <td>2332.00</td>
+              <td>
+                <span>-40%</span>
+              </td>
+              <td>
+                <a href="#"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="src/index.js"></script>
+  </body>
 </html>

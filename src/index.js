@@ -1,10 +1,4 @@
-import "./styles.css";
+import "../styles/index.scss";
+import app from "./app";
 
-document.getElementById("app").innerHTML = `
-  <h1>Hello!</h1>
-  <div>
-    Here will be my cute budget tracker!!!
-  </div>
-`;
-
-
+app.init();
