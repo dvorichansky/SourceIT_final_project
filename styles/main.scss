@@ -37,53 +37,64 @@ h2 {
   line-height: 1;
 }
 
-header, section {
+button{
+  cursor: pointer;
+}
+
+.header, .section {
   max-width: 1160px;
   margin: 0 auto;
   padding: 56px 0;
 }
 
-form {
+.budget__form {
   border-radius: 8px;
   padding: 24px;
   background-color: #2b383f;
 }
 
-input {
-  display: block;
+.form__input, .form__select, .form__button{
   width: 100%;
-  height: 40px;
+  display: block;
   margin-bottom: 16px;
+  height: 40px;
   padding: 0 12px;
   border: 1px solid #4f5e65;
   border-radius: 4px;
   font-size: 14px;
   background-color: transparent;
   color: #ffffff;
-  outline: none;
   transition: all 275ms;
+  outline: none;
   &:focus {
     border-color: #31c3a2;
   }
 }
 
-button {
-  min-width: 70px;
-  width: 100%;
-  height: 40px;
-  padding: 0 12px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
+.form__input__error{
+  border-color: #F85640;
+}
+
+.budget__form__sudmit-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.budget__form__select, .budget__form__button{
+  width: 45%;
+  margin: 0;
+}
+
+.budget__form__select option{
+  color: #333; 
+}
+
+.budget__form__button {
   background-color: #31c3a2;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 275ms;
 }
 
 
-section {
+.section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   .report {
@@ -123,10 +134,15 @@ td {
   }
 }
 
-a {
+a, i {
   font-size: 14px;
   font-weight: 500;
   text-decoration: underline;
   color: #BDC2C4;
   transition: all 275ms;
+  cursor: pointer;
+}
+
+i:hover{
+  color: #f1f1f1;
 }

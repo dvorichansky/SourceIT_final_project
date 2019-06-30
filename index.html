@@ -12,22 +12,34 @@
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <h1>Budget tracker</h1>
       <div class="budget">
-        <div>
-          <form>
+          <form class="form budget__form">
             <input
+              class="form__input budget__form__input budget__form__input-description"
               type="text"
               required="required"
               placeholder="Add description"
+              value=""
+            />                       
+            <input 
+              class="form__input budget__form__input budget__form__input-value" 
+              type="text" 
+              required="required"
+              placeholder="Value"
+              value=""
             />
-            <input type="number" required="required" placeholder="Value" />
-            <button>To calculate</button>
+            <div class="budget__form__sudmit-section">
+              <select class="form__select budget__form__select" class="dropdown">
+                <option value="inc">Income</option>
+                <option value="exp">Expenses</option>
+              </select>
+              <button class="form__button budget__form__button" type="button">To calculate</button>
+            </div>            
           </form>
-        </div>
-        <div>
-          <h2>Available Budget in January 2019:</h2>
+        <div class="budget__information">
+          <h2>Available Budget in <span>January</span>:</h2>
           <div class="budget-current">+ $119</div>
         </div>
         <div>
@@ -41,16 +53,16 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr class="recent-reports__income">
                   <td>INCOME</td>
-                  <td>+ 178.00</td>
+                  <td class="recent-reports">+ 178.00</td>
                   <td>
                     <span>+40%</span>
                   </td>
                 </tr>
-                <tr>
+                <tr class="recent-reports__expenses">
                   <td>EXPENSES</td>
-                  <td>- 78.00</td>
+                  <td class="recent-reports">- 78.00</td>
                   <td>
                     <span>-40%</span>
                   </td>
@@ -62,100 +74,80 @@
       </div>
     </header>
 
-    <section>
-      <div class="box-table report report-plus">
+    <section class="section">
+      <div class="box-table report report-income">
         <h2>Income</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Amount</th>
-              <th>Percent</th>
-              <th>Delete</th>
+        <table class="report__table">
+          <thead class="report-thead">
+            <tr class="report-thead__item">
+              <th class="report-thead__description">Description</th>
+              <th class="report-thead__quantity">Amount</th>
+              <th class="report-thead__percent">Percent</th>
+              <th class="report-thead__delete">Delete</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>dsds</td>
-              <td>2332.00</td>
-              <td>
+          <tbody class="report-tbody report-tbody__income">
+            <tr class="report-tbody__item" data-id="1" style="">
+              <td class="report-tbody__description">cldsds</td>
+              <td class="report-tbody__quantity">2332.00</td>
+              <td class="report-tbody__percent">
                 <span>+40%</span>
               </td>
-              <td>
-                <a href="#"><i class="fas fa-trash-alt"></i></a>
+              <td class="report-tbody__delete">
+               <i class="fas fa-trash-alt"></i>
               </td>
             </tr>
-            <tr>
-              <td>dsds</td>
-              <td>2332.00</td>
-              <td>
+            <tr class="report-tbody__item" data-id="2">
+              <td class="report-tbody__description">cldsds</td>
+              <td class="report-tbody__quantity">2332.00</td>
+              <td class="report-tbody__percent">
                 <span>+40%</span>
               </td>
-              <td>
-                <a href="#"><i class="fas fa-trash-alt"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td>dsds</td>
-              <td>2332.00</td>
-              <td>
-                <span>+40%</span>
-              </td>
-              <td>
-                <a href="#"><i class="fas fa-trash-alt"></i></a>
+              <td class="report-tbody__delete">
+                <i class="fas fa-trash-alt"></i>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="box-table report report-minus">
+      <div class="box-table report report-expenses">
         <h2>Expenses</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Amount</th>
-              <th>Percent</th>
-              <th>Delete</th>
+        <table class="report__table">
+          <thead class="report-thead">
+            <tr class="report-thead__item">
+              <th class="report-thead__description">Description</th>
+              <th class="report-thead__quantity">Amount</th>
+              <th class="report-thead__percent">Percent</th>
+              <th class="report-thead__delete">Delete</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>dsds</td>
-              <td>2332.00</td>
-              <td>
-                <span>-40%</span>
+          <tbody class="report-tbody report-tbody__expenses">
+            <!-- <tr class="report-tbody__item" data-id="1">
+              <td class="report-tbody__description">cldsds</td>
+              <td class="report-tbody__quantity">2332.00</td>
+              <td class="report-tbody__percent">
+                <span>+40%</span>
               </td>
-              <td>
+              <td class="report-tbody__delete">
                 <a href="#"><i class="fas fa-trash-alt"></i></a>
               </td>
             </tr>
-            <tr>
-              <td>dsds</td>
-              <td>2332.00</td>
-              <td>
-                <span>-40%</span>
+            <tr class="report-tbody__item" data-id="1">
+              <td class="report-tbody__description">cldsds</td>
+              <td class="report-tbody__quantity">2332.00</td>
+              <td class="report-tbody__percent">
+                <span>+40%</span>
               </td>
-              <td>
+              <td class="report-tbody__delete">
                 <a href="#"><i class="fas fa-trash-alt"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td>dsds</td>
-              <td>2332.00</td>
-              <td>
-                <span>-40%</span>
-              </td>
-              <td>
-                <a href="#"><i class="fas fa-trash-alt"></i></a>
-              </td>
+              </td> -->
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <script src="src/index.js"></script>
+    <script src="src/scripts.js"></script>
   </body>
 </html>
